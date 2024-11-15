@@ -18,6 +18,7 @@ RUN rm -f /opt/z-way-server/automation/storage/*
 
 # Unblock zbw
 RUN rm /etc/zbw/flags/no_connection
+RUN mkdir /etc/z-way
 RUN echo "zbox" > /etc/z-way/box_type
 
 COPY rootfs/ /
