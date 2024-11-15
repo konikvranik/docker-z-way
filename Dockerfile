@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM debian:bullseye-slim
 
 WORKDIR /opt/z-way-server
 
