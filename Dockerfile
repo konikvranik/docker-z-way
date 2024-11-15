@@ -12,6 +12,8 @@ RUN dpkg --add-architecture armhf && apt-get update && \
     ca-certificates curl \
     wget procps gpg iproute2 openssh-client openssh-server sudo logrotate
 
+RUN sudo dpkg --add-architecture armhf
+
 # Install z-way-server
 RUN curl https://storage.z-wave.me/Z-Way-Install | bash
 RUN rm -f /opt/z-way-server/automation/storage/*
