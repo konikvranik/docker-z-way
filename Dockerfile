@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Block zbw key request
 RUN mkdir -p /etc/zbw/flags && touch /etc/zbw/flags/no_connection
 
-RUN apt-get update && \
+RUN dpkg --add-architecture armhf && apt-get update && \
     apt-get install -qqy --no-install-recommends \
     ca-certificates curl \
     wget procps gpg iproute2 openssh-client openssh-server sudo logrotate
